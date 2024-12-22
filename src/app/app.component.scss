@@ -1,0 +1,43 @@
+section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.section__header {
+    position: relative;
+    overflow: visible;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px 20px;
+  max-width: 720px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  &__collage {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    color: rgba(0, 0, 0, .7);
+    font-weight: 400;
+    white-space: pre-wrap;
+    line-height: 130%;
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: 474px) {
+  .main__text {
+    line-height: 100%;
+    font-size: 14px;
+  }
+}

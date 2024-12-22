@@ -1,0 +1,20 @@
+<div class="price">
+    <div class="price__body">
+        <h2 class="price__title">
+            Услуги Преподавателя<br>Арабского Языка
+        </h2>
+        <span class="price__description">
+            Изучение арабского языка с опытным репетитором
+        </span>
+        <div class="price__content">
+            <div *ngFor="let price of (prices | async)">
+                <div class="price__container">
+                    <span class="price__name">
+                        {{price.name}}
+                    </span>
+                    <span class="price__number">{{price.number}} ₽</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
