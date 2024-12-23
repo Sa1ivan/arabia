@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { HeaderComponent} from "./components/header/header.component";
+import { HeaderComponent } from "./components/header/header.component";
 import { PriceComponent } from "./components/price/price.component";
-import {NgOptimizedImage} from "@angular/common";
+import { ReviewComponent } from './components/review/review.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import {NgOptimizedImage} from "@angular/common";
     imports: [
         HeaderComponent,
         PriceComponent,
-        NgOptimizedImage,
+        ReviewComponent
     ],
   styleUrl: './app.component.scss',
 })

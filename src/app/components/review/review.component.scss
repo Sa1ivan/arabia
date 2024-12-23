@@ -1,0 +1,110 @@
+.review {
+    margin: 30px 0;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__content {
+        box-sizing: border-box;
+        max-width: 930px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: auto;
+    }
+    &__content::-webkit-scrollbar {
+        width: 0;
+    }
+    &__container {
+        max-width: 280px;
+        min-width: 210px;
+        max-height: 260px;
+        width: 100%;
+        box-sizing: content-box;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: 5px;
+        overflow-y: auto;
+    }
+    &__container::-webkit-scrollbar {
+        width: 0;
+    }
+    &__title {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .7);
+        font-weight: 300;
+    }
+    &__name {
+        display: flex;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .7);
+        font-weight: 300;
+        align-items: center;
+    }
+    &__description {
+        padding: 5px 0;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .7);
+        font-weight: 300;
+    }
+    &__tag {
+        font-size: 10px;
+        color: rgba(0, 0, 0, .7);
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        padding-right: 5px;
+        &-text {
+            padding-top: 5px;
+            display: flex;
+        }
+    }
+    &__date {
+        display: flex;
+        font-size: 11px;
+        align-items: center;
+        align-self: baseline;
+    }
+    &__rating {
+        background: url("../../../assets/images/star.svg");
+        box-sizing: border-box;
+        width: 18px;
+        height: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-container {
+            display: flex;
+        }
+    }
+    &__left {
+        background: url("../../../assets/images/left-arrow-svgrepo-com.svg");
+        width: 48px;
+        height: 48px;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+    &__right {
+        background: url("../../../assets/images/right-arrow-svgrepo-com.svg");
+        width: 48px;
+        height: 48px;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,43 @@
+<div class="review">
+    <div class="review__body">
+        <div class="review__content">
+            <ng-container *ngFor="let review of (reviews | async)">
+                <div class="review__container">
+                    <div class="review__title">
+                        <span class="review__date"><div class="review__tag review__tag-date">Дата: </div>{{ review.date }}</span>
+                        <div class="review__rating-container">
+                            <ng-container *ngIf="review.rating === '1'">
+                                <span class="review__rating"></span>
+                            </ng-container>
+                            <ng-container *ngIf="review.rating === '2'">
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                            </ng-container>
+                            <ng-container *ngIf="review.rating === '3'">
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                            </ng-container>
+                            <ng-container *ngIf="review.rating === '4'">
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                            </ng-container>
+                            <ng-container *ngIf="review.rating === '5'">
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                                <span class="review__rating"></span>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <span class="review__name"><div class="review__tag">Имя: </div>{{ review.name }}</span>
+                    <span class="review__tag review__tag-text">Текст отзыва:</span>
+                    <div class="review__description">{{ review.description }}</div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
