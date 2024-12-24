@@ -127,7 +127,6 @@
             text-decoration: none;
             gap: 8px;
             background: rgb(85, 82, 232);
-            transition: background .3s, box-shadow .3s, -webkit-box-shadow .3s;
             padding: 8px 24px;
             height: 32px;
             font-size: 18px;
@@ -135,7 +134,7 @@
             border-radius: 20px;
             color: white;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 15px;
             &-text {
                 font-size: 18px;
             }

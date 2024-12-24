@@ -1,0 +1,33 @@
+.modal {
+    max-width: fit-content;
+    &__img {
+        max-width: 1200px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+::ng-deep {
+    .cdk-overlay-pane.mat-mdc-dialog-panel {
+        max-width: 1200px;
+        width: 100%;
+        box-sizing: border-box;
+    } 
+
+    .mat-mdc-dialog-content {
+        max-height: max-content;
+    }
+
+    .mat-mdc-dialog-container .mat-mdc-dialog-content {
+        padding: 0;
+    }
+}

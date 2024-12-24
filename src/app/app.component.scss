@@ -12,10 +12,18 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 75px 20px;
+  padding: 0 20px;
   max-width: 740px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  &__title {
+    text-align: center;
+    font-size: 48px;
+    line-height: 110%;
+    font-weight: 700;
+    color: rgba(0, 0, 0);
+  }
 
   &__collage {
     width: 100%;
@@ -29,6 +37,14 @@ section {
     color: rgba(0, 0, 0, .7);
     font-weight: 400;
     white-space: pre-wrap;
+    line-height: 110%;
+    font-size: 12px;
+  }
+
+  &__text-desc {
+    color: rgba(0, 0, 0, .7);
+    font-weight: 400;
+    white-space: pre-wrap;
     line-height: 130%;
     font-size: 18px;
   }
@@ -38,16 +54,40 @@ section {
     flex-direction: column;
     text-decoration: none;
   }
+
+  &__logo {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+  }
+
+  &__image {
+    margin-top: 30px;
+    background: url("../assets/images/certificate.jpeg");
+    width: 300px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .author {
-  padding: 20px;
+  padding: 30px 20px 10px;
 }
 
+@media screen and (max-width: 585px){
+  .main__text-desc {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
 
-@media screen and (max-width: 474px) {
-  .main__text {
-    line-height: 100%;
-    font-size: 14px;
+  .main__title {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 400;
   }
 }

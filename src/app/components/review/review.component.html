@@ -122,7 +122,7 @@
         </div>
         <div class="review__right" *ngIf="allReviews?.length"></div>
         <a class="review__button-link" (click)="getAllReviews()" *ngIf="currentScreen > 907 && allReviews?.length && !this.isOpen">
-            <span class="review__button-link-text" *ngIf="!this.isOpen">Показать все</span>
+            <span class="review__button-link-text" *ngIf="currentScreen > 907 && allReviews?.length && !this.isOpen">Показать все</span>
         </a>
         <a class="review__button-link" (click)="getAllReviews()" *ngIf="currentScreen > 907 && shortReviews?.length && this.isOpen">
             <span class="review__button-link-text" *ngIf="this.isOpen">Скрыть</span>
