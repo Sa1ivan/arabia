@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
 
+export class HeaderComponent {
+  public scrollToContact() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
 }

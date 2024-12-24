@@ -1,0 +1,131 @@
+<div class="review">
+    <h2 class="review__main-title">Отзывы</h2>
+    <div class="review__body">
+        <div class="review__left" *ngIf="allReviews?.length"></div>
+        <div class="review__content">
+            <ng-container *ngIf="currentScreen < 908; else fullScreen">
+                <ng-container *ngFor="let review of allReviews">
+                    <div class="review__container">
+                        <div class="review__title">
+                            <span class="review__date">{{ review.date }}</span>
+                            <div class="review__rating-container">
+                                <ng-container *ngIf="review.rating === '1'">
+                                    <span class="review__rating"></span>
+                                </ng-container>
+                                <ng-container *ngIf="review.rating === '2'">
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                </ng-container>
+                                <ng-container *ngIf="review.rating === '3'">
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                </ng-container>
+                                <ng-container *ngIf="review.rating === '4'">
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                </ng-container>
+                                <ng-container *ngIf="review.rating === '5'">
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                    <span class="review__rating"></span>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <span class="review__name">{{ review.name }}</span>
+                        <div class="review__description">{{ review.description }}</div>
+                    </div>
+                </ng-container>
+            </ng-container>
+            <ng-template #fullScreen>
+                <ng-container *ngIf="!isOpen; else fullReviews">
+                    <ng-container *ngFor="let review of shortReviews">
+                        <div class="review__container">
+                            <div class="review__title">
+                                <span class="review__date">{{ review.date }}</span>
+                                <div class="review__rating-container">
+                                    <ng-container *ngIf="review.rating === '1'">
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '2'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '3'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '4'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '5'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <span class="review__name">{{ review.name }}</span>
+                            <div class="review__description">{{ review.description }}</div>
+                        </div>
+                    </ng-container>
+                </ng-container>
+                <ng-template #fullReviews>
+                    <ng-container *ngFor="let review of allReviews">
+                        <div class="review__container">
+                            <div class="review__title">
+                                <span class="review__date">{{ review.date }}</span>
+                                <div class="review__rating-container">
+                                    <ng-container *ngIf="review.rating === '1'">
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '2'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '3'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '4'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                    <ng-container *ngIf="review.rating === '5'">
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                        <span class="review__rating"></span>
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <span class="review__name">{{ review.name }}</span>
+                            <div class="review__description">{{ review.description }}</div>
+                        </div>
+                    </ng-container>
+                </ng-template>
+            </ng-template>
+        </div>
+        <div class="review__right" *ngIf="allReviews?.length"></div>
+        <a class="review__button-link" (click)="getAllReviews()" *ngIf="currentScreen > 907 && allReviews?.length && !this.isOpen">
+            <span class="review__button-link-text" *ngIf="!this.isOpen">Показать все</span>
+        </a>
+        <a class="review__button-link" (click)="getAllReviews()" *ngIf="currentScreen > 907 && shortReviews?.length && this.isOpen">
+            <span class="review__button-link-text" *ngIf="this.isOpen">Скрыть</span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,190 @@
+.review {
+    margin: 30px 0;
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    &__main-title {
+        text-align: center;
+        font-size: 48px;
+        line-height: 110%;
+        font-weight: 700;
+        color: rgba(0, 0, 0);
+    }
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        max-width: 870px;
+        margin: 30px auto;
+    }
+    &__content {
+        box-sizing: border-box;
+        max-width: 870px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: auto;
+    }
+    &__content::-webkit-scrollbar {
+        width: 0;
+    }
+    &__container {
+        min-width: 250px;
+        max-width: 250px;
+        max-height: 250px;
+        box-sizing: border-box;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid rgb(85, 82, 232);
+        border-radius: 5px;
+        overflow-y: auto;
+    }
+    &__container::-webkit-scrollbar {
+        width: 0;
+    }
+    &__title {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .7);
+        font-weight: 300;
+        border-bottom: 1px solid rgb(85, 82, 232);
+    }
+    &__name {
+        display: flex;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .7);
+        font-weight: 400;
+        align-items: center;
+        color: rgb(85, 82, 232);
+        padding-top: 5px;
+    }
+    &__description {
+        padding: 5px 0;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .7);
+        font-weight: 300;
+    }
+    &__tag {
+        font-size: 10px;
+        color: rgba(0, 0, 0, .7);
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        padding-right: 5px;
+        &-text {
+            padding-top: 5px;
+            display: flex;
+        }
+    }
+    &__date {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+        font-weight: 400;
+        color: rgb(85, 82, 232);
+    }
+    &__rating {
+        background: url("../../../assets/images/star.svg");
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-container {
+            display: flex;
+        }
+    }
+    &__left {
+        background: url("../../../assets/images/left-arrow-svgrepo-com.svg");
+        width: 48px;
+        height: 48px;
+        background-position: center;
+        background-size: cover;
+    }
+    &__right {
+        background: url("../../../assets/images/right-arrow-svgrepo-com.svg");
+        width: 48px;
+        height: 48px;
+        background-position: center;
+        background-size: cover;
+    }
+    &__button {
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 0;
+            line-height: 1em;
+            text-decoration: none;
+            gap: 8px;
+            background: rgb(85, 82, 232);
+            transition: background .3s, box-shadow .3s, -webkit-box-shadow .3s;
+            padding: 8px 24px;
+            height: 32px;
+            font-size: 18px;
+            border: 0 solid rgb(0, 0, 255);
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            margin-top: 5px;
+            &-text {
+                font-size: 18px;
+            }
+        }
+    }
+    &__button-link:hover {
+        background: rgb(57, 54, 204);
+    }
+}
+@media screen and (max-width: 375px) {
+    .review {
+        &__container {
+            min-width: 200px;
+            max-width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .review {
+        &__main-title {
+            font-size: 32px;
+            line-height: 36px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (min-width: 908px) {
+    .review {
+        &__body {
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+
+        }
+        &__right, &__left {
+            display: none;
+        }
+        &__content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+    }
+    &__container {
+        max-width: none;
+        width: 100%;
+        overflow-y: hidden;
+    }
+}
+}
