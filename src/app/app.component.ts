@@ -27,7 +27,7 @@ export class AppComponent {
 
   public open() {
    this.dialog.open(ModalComponent, {
-    width: '85%',
+    width: '75%',
    });
   }
 }

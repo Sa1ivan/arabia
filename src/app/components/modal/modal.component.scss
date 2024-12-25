@@ -1,7 +1,7 @@
 .modal {
     max-width: fit-content;
     &__img {
-        max-width: 1200px;
+        max-width: 1000px;
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -18,7 +18,7 @@
 
 ::ng-deep {
     .cdk-overlay-pane.mat-mdc-dialog-panel {
-        max-width: 1200px;
+        max-width: 1000px;
         width: 100%;
         box-sizing: border-box;
     } 
