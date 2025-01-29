@@ -7,6 +7,7 @@ export function reviewMapper(item: string): IItemsReviewData[] {
     const allDate: string[] = [];
     const allRatings: string[] = [];
     const allDescriptions: string[] = [];
+    const allNewDescs: string[] = [];
 
     desc.forEach((review, i) => {
         if(review.indexOf('"ratingValue') > 0) {
@@ -35,11 +36,13 @@ export function reviewMapper(item: string): IItemsReviewData[] {
         }
     });
 
+    allDescriptions.forEach(desc => allNewDescs.push(desc.replace(/<br>/gi, "")));
+
     allAuthors.forEach((author, i) => {
         reviewData.push({
             name: author,
             date: allDate[i],
-            description: allDescriptions[i],
+            description: allNewDescs[i],
             rating: allRatings[i]
         })
     });
