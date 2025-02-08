@@ -5,6 +5,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { ContactComponent } from "./components/contact/contact.component";
 import { MatDialogModule, MatDialog } from "@angular/material/dialog";
 import { ModalComponent } from './components/modal/modal.component';
+import {WordsComponent} from "./components/words/words.component";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { ModalComponent } from './components/modal/modal.component';
         ReviewComponent,
         ContactComponent,
         MatDialogModule,
-        ModalComponent
+        ModalComponent,
+        WordsComponent
     ],
   styleUrl: './app.component.scss',
 })
