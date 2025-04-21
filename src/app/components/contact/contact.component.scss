@@ -60,6 +60,11 @@
     border-radius: 10px;
     text-decoration: none;
   }
+  &__text:hover {
+    background: rgb(57, 54, 204);
+    border: 2px solid white;
+    color: white;
+  }
 }
 
 @media screen and (max-width: 585px) {
