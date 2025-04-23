@@ -27,6 +27,7 @@ export class AppComponent {
     private dialog: MatDialog
   ) {}
 
+
   public open() {
    this.dialog.open(ModalComponent, {
     width: '75%',
