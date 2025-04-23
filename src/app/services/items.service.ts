@@ -13,16 +13,24 @@ export class ItemsService {
   constructor(
       private http: HttpClient,
   ) { }
-  private api = 'http://localhost:4200/';
-  public getPrices(): Observable<IItemsPriceData[]> {
-    const url = '/api/profile/KhadzhiyevIS3/';
+
+  public getPrices(): Observable<any> {
+    const url = 'assets/mock/prices.json';
     const headers = new HttpHeaders({'Access-Control-Allow-Origin': '*'});
-    return this.http.get(url, {responseType: 'text'}).pipe(map(data => priceMapper(data)));
+    return this.http
+        .get(url)
+        .pipe(
+            map(data => data)
+        );
   }
 
-  public getReviews(): Observable<IItemsReviewData[]> {
-    const url = '/api/profile/KhadzhiyevIS3/reviews/';
+  public getReviews(): Observable<any> {
+    const url = 'assets/mock/reviews.json';
     const headers = new HttpHeaders({'Access-Control-Allow-Origin': '*'})
-    return this.http.get(url, {responseType: 'text', headers}).pipe(map(data => reviewMapper(data)));
+    return this.http
+        .get(url)
+        .pipe(
+            map(x => x)
+        );
   }
 }

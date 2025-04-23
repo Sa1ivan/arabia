@@ -22,5 +22,6 @@ export function priceMapper(item: string): IItemsPriceData[] {
             name: allPricesName[i]
         })
     })
+
     return priceData;
 }
