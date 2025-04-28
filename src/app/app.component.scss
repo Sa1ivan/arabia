@@ -21,6 +21,10 @@
     overflow: visible;
 }
 
+.tab {
+  tab-size: 8;
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -29,6 +33,13 @@
   max-width: 740px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
 
   &__end {
     display: flex;
@@ -57,7 +68,7 @@
     object-fit: cover;
     object-position: center;
     box-sizing: border-box;
-    margin: 20px 0;
+    margin: 0;
   }
 
   &__text {
@@ -117,5 +128,27 @@
     font-size: 32px;
     line-height: 36px;
     font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .main__text-desc {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+
+  .main__title {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 400;
+  }
+
+  .revert {
+    grid-area: 1;
+  }
+
+  .main__container {
+    grid-template-columns: 1fr;
   }
 }
